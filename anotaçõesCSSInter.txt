@@ -1,0 +1,169 @@
+CSS3 Intermediario
+
+Modelo de Caixa
+    height: Altura
+    width: Largura
+    padding: Expaçamento interno
+    Margin: Expaçamento Externo
+    Assim como as bortas, elas(margin/padding) podem ser feitas com -top,bottom... ou colocar tudo junto em sentido horario
+    Collapse 
+        Se um objeto estiver por exemplo com uma margin-bottom de 10px e 
+        houver outro objeto embaixo dele com uma margin-top de 5px, a distancia entre eles será de 10px
+        pois o que irá valer é a maior margin, isso se chama collapse
+
+Elementos Flutuantes
+    Uma propriedade flutuante é usada para posicionar e formadar um conteuto, 
+    como deixar uma imagem flutuando a esquerda de um texto em um conteiner.
+    
+    A propriedade float pode ter um dos sequintes valores: 
+    left, right, none(default) e inherit(O elemento herda o valor float do seu parente).
+
+    Uma elemento flutuate sai do fluxo normal do documento, podendo ficar dentro de outros elementos.
+    Os elementos flutuantes ficam no mesmo fluxo então eles se afetam no posicionamento. 
+    Exemplo: eles ficariam um do lado do outro
+
+    Elementos flutuantes mudam de posição com o tamanho da página.
+
+    Um texto fica envolta do conteudo, se vc não quiser isso vc pode ultilizar o atributo clear.
+
+    Clear
+        A propriedade clear especifica o que acontece com o elemento proximo ao elemento flutuante.
+        
+        A pripriedade clear pode ter esses valores: 
+        none(default);
+        left(ignora elementos flutuantes a esquerda);
+        right(ignora elementos flutuantes a direita);
+        both(ignora elementos flutuantes de ambos os lados);
+        inherit(O elemento herda o valor clear do seu parente)
+        
+        Quanto vc usar elemenstos flutuantes dentro de outros containers(divs) que tenham, 
+        por exemplo um background, ele não irá aparecer, sendo necessario por uma div clear vazia junto com os elementos.
+
+Elementos inline, block e inline-block
+    Diferença: 
+    Um elemento block ocupa todo o espaço da tela e fica um embaixo do outro.Ex: h1, p, table.
+    
+    Um elemento inline fica um do lado do outro e alargura do elemento depende de seu conteudo.Ex: a, span, img.
+    
+    Um elemento inline-block tem a largura difinida pelo seu conteudo e assim como o block fica um ao lado do outro.
+    mas quando não há espaço ele fica embaixo.
+    Inline-block so pode ser feito com display:inline-block
+        
+        Mais sobre inline-block:
+        Comparado ao display: inline, a maior diferença é que 
+        o inline-blick permite configurar a largura e a altura do elemento.
+        
+        Comparado ao display: block, a maior diferença é que 
+        o inline-block não adiciona uma quebra de linha após o elemento,
+        assim o elemento pode ficar ao lado de outros elementos.
+        
+Posicionamento
+    Existe 5 tipos de posições:
+        static(default)
+        relative
+        fixed
+        absolute
+        sticky
+
+    Para modificar o posicionamento se utlilizar 'position: posicionamento'.
+
+    Static:
+        É a pocição padrão da página e não pode ser modificada.
+    
+    A partir do relative ate o sticky o posicionamento pode ser modificado com top, left, right e bottom.
+
+    Relative:
+        Possui a pocisão relativa a posição normal.
+        Definir as propriedades top, right, bottom e left de um elemento relative 
+        fará com que ele seja ajustado para fora de sua posição normal. 
+        Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
+    
+    Absolute:
+        Um elemento absoluto é removido do fluxo normal e 
+        terá sua posição relativa a página se o mesmo não estiver dentro de algum container 
+        com posição diferente de static.
+        Como ele é removido do fluxo normal outros elementos preenchiram a lacuna que ele deixar.
+    
+    Fixed:
+        Um elemento com position: fixed; está posicionado em relação à janela de visualização, 
+        o que significa que sempre permanece no mesmo lugar, mesmo que a página seja rolada.
+        Como ele é removido do fluxo normal outros elementos preenchiram a lacuna que ele deixar.
+    
+    Sticky:
+        Um elemento sticky alterna entre relative e fixed, dependendo da posição de rolagem. 
+        Ele é posicionado relativo até que uma determinada posição de deslocamento seja encontrada na viewport 
+        - então ele "gruda" no lugar (como position:fixed).
+
+        Nota: o Internet Explorer não suporta posicionamento sticky. 
+        O Safari requer um prefixo -webkit-. 
+        Você também deve especificar pelo menos um entre top, right, bottom ou left 
+        para que o posicionamento fixo funcione.
+    
+    Controle de empilhamento:
+        Quando uma posição fica acima da outra e quer decidir qual 
+        sobrepoe a outra vc pode ultilizar z-index para dedicir qual ira aparecer primeiro.
+
+Links
+    Os links possuem 4 diferentes estados, eles são:
+
+    a:link - um normal, link não visitado
+    a:visited - um link que o usuario já visitou
+    a:hover - o link quando o usuario para o mouse em cima
+    a:active - o link quanto é clicado
+
+Especificação de seletores
+    Tem momentos que vc deseja fazer modificações especificas em lugares especificos, como um menu de links.
+    
+    Seletor do filho
+        
+        Ex: li>a
+
+        O que fará?
+            Só afeta os links diretamente dentro do li, se tiver por exemplo um <span><a href=""></a></span>
+            o link não será modificado
+
+    Seletor Descedente
+        
+        Ex: p a
+
+        O que fará?
+            Afeta todos os descedentes <a> de <p>, portando, diferente do filho, 
+            não importar se o <a> estiver dentro de outro elemento, 
+            contando que o <a> esteja dentro do <p> o <a> será modificado
+
+    Seletor de irmão
+        
+        Ex: h1+p
+
+        O que fará?
+            Seleciona o primeiro elemento <p> que esteja diretamente a baixo de h1 <h1>
+            Se tiver qualquer tag entre eles, o <p> não será modificado
+
+    Irmão geral
+        
+        Ex: h1~p
+
+        O que fará?
+            A diferença do seletor de irmão é que afetará todos os <p> que estejam diretamente embaixo do <h2>
+
+Parallax(Eu acho bonito d+)
+
+    Parallax é um efeito visual usado para manibular a percebção do usuario ao background.
+    Para adquiri-lo, custuma-se usar javascript, mas tambem é possivel com CSS3
+        
+    height: 100%;
+    O height do html, body, e dos containers das imagens tem que ser 100%
+
+    background-repeat: no-repeat;
+    Para as imagens não se repetirem
+
+    background-size: cover;
+    Para o background cobrir todo o container
+
+    background-position: center;
+    Centrailzer a imagem no container
+
+    background-attachment: fixed;
+    Deixar a imagem fixa, principal fator para o efeito parallax
+
+Fontes customizadas: https://www.udemy.com/course/web-completo/learn/lecture/11123358#overview

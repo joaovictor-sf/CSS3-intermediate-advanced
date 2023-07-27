@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Trebuchet Ms", Helvetica, sans-serif;
+    background: #fff url(../imagens/fundo.png) repeat-x;
+}
+
+main{
+    width: 750px;
+    margin: 0 auto;
+}
+
+header{
+    height: 150px;
+    background: url(../imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+}
+
+
+/*
+**Barra de Navegação
+*/
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#nav-top ul{
+    background: #b10333;
+    margin-top: 30px;
+    float: left;
+}
+
+#nav-top li{
+    float: left;
+}
+
+#nav-top li a{
+    font-size: 0.9em;
+    display: block;
+    padding: 0.3em 1.3em;
+    line-height: 2.1em;
+    color: #fff;
+    background: url(../imagens/divisor.png) no-repeat right;
+}
+
+#nav-top .last{
+    background: none;
+}
+
+#nav-top li a:hover{
+    color: #69001d;
+}
+
+#nav-top #atual a{
+    color: #fff;
+    background: #de003e;
+}
+
+/*
+**Layaout
+*/
+#principal{
+    margin-top: 60px;
+    background: #f5f5f5;
+}
+
+#primario, #secundario, #lateral{
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#primario, #secundario{
+    width: 270px;
+    margin-left: 15px;
+}
+
+#brasil #primario{
+    width: 555px;
+    float: right;
+}
+
+#fotos #primario{
+    width: 100%;
+    margin-left: 0;
+}
+
+#lateral{
+    width: 180px;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.caixa{
+    margin: 10px 0;
+    padding: 5px;
+    background: url(../imagens/fundo-caixa.png);
+}
+
+.conteudo{
+    background: #fff;
+    padding: 5px;
+}
+
+/*
+**Lateral
+*/
+.titulo h2{
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#lateral .conteudo a{
+    font-size: 0.8em;
+    color: black;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#lateral .conteudo a:hover{
+    color: rgb(180, 178, 178);
+    background: url(../imagens/marcador.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+input#email{
+    padding: 10px;
+    border: none;
+}
+
+input[type="submit"]{
+    padding: 8px;
+    color: white;
+    background: #b10333;
+    font-weight: bold;
+    border: 3px solid #69001d;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: #de003e;
+    border: 3px solid #b10333;
+}
+/*
+**Fim Lateral
+*/
+/*
+**primario
+*/
+.imagem{
+    width: 100%;
+    border: 2px solid gainsboro;
+}
+h3{
+    font-size: 0.9em;
+    padding: 3px;
+    margin-bottom: 5px;
+    background: #b10333;
+    display: inline-block;
+}
+a.leia-mais{
+    margin-left: 2px;
+    text-decoration: underline;
+    color: #69001d;
+}
+
+a.leia-mais:hover{
+    color: #b10333;
+}
+
+.mundo{
+    height: 75px;
+    background: url(../imagens/mundo.jpg) no-repeat left;
+    background-size: 100px;/*100px*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 110px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.mundo a{
+    padding-left: 6px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #007bee;
+}
+
+#home .mundo a{
+    font-size: 0.6em;
+}
+
+#home .mundo p{
+    font-size: 0.8em;
+}
+/*
+**Fim primario
+*/
+/*
+**secundario
+*/
+#secundario h3{
+    color: #fff;
+}
+
+.recentes{
+    height: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.conteudo-recente{
+    margin-left: 110px;
+}
+
+.recentes a{
+    /*padding-left: 10px;*/
+    margin-left: 6px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    color: #007bee;
+}
+
+.recentes p{
+    /*margin-left: 10px;*/
+    font-size: 0.8em;
+}
+
+.container-imagens{
+    margin-top: 5px;
+    width: 100px;
+    float: left;
+}
+
+.imagens{
+    width: 100%;
+}
+/*
+**Fim secundario
+*/
+/*
+**Fim Layaout
+*/
+/*
+**Rodapé
+*/
+footer{
+    background: #294c71;
+    padding: 20px;
+}
+
+#rodape{
+    width: 750px;
+    margin: 0 auto;
+    color: #fff;
+}

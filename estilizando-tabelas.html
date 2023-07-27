@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando tabelas</title>
+    <style>
+        body{
+            font-family:"Trebuchet MS", Helvetica, sans-serif
+        }
+
+        table{
+            width: 600px;
+            /*border-collapse possui duas opções, separate(default) e collapse*/
+            /*separate: Existe um expaço entre as bordas; collapse: esse espaçonão existe*/
+            border-collapse: collapse;
+        }
+
+        th, td{
+            padding: 7px;
+        }
+
+        th{
+            text-transform: uppercase;
+            border-top: 1px solid #999;
+            border-top: 1px solid #111;
+            text-align: left;
+            font-size: 90%;/*90% do tamanho original*/
+            letter-spacing: 0.1em;/*espaço entre letras*/
+        }
+
+        tr.alternado{
+            background-color: #efefef;
+        }
+
+        tr:hover{
+            background-color: #c3e6e5;
+        }
+
+        .numero{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>Estilizando tabelas</h2>
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th class="numero">Preço</th>
+        </tr>
+        <tr class="alternado">
+            <td>001</td>
+            <td>Notebook</td>
+            <td class="numero">R$ 2,500</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Tablet</td>
+            <td class="numero">R$ 1,500</td>
+        </tr>
+        <tr class="alternado">
+            <td>003</td>
+            <td>Iphone</td>
+            <td class="numero">R$ 3,500</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Nexus</td>
+            <td class="numero">R$ 3,000</td>
+        </tr>
+    </table>
+</body>
+</html>

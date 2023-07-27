@@ -1,0 +1,86 @@
+body{
+    font-family: "Trebuchet Ms", Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+main{
+    width: 70%;/*720px*/
+    margin: 0 auto;
+    background: #fff;
+    min-width: 720px; /*larguta miníma*/
+}
+
+header{
+    height: 200px;
+    background: #225992 url(imagem/cabecalho2.jpg) no-repeat center;
+    text-align: center;
+    line-height: 100px;
+}
+
+#conteudo {
+    width: 78%;/*520px*/
+    float: right;
+}
+
+img.img-noticia {
+    width: 96%;
+    padding: 2%;
+}
+
+#principal{
+    width: 60%;/*320px*/
+    float: left;
+}
+
+#secundario{
+    width: 33%;/*180px*/
+    float: right;
+    background: #d1d1d1;
+}
+#secundario h2,
+#secundario p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav{
+    width: 20%;/*180px*/
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+footer{
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+}
+/*
+**  Navegação
+*/
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    /*background: #fff;
+    border: 1px solid  #c4c4c4;*/
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+}
+
+ul a:hover{
+    /*background: rgb(77, 71, 71);
+    color: #f2f2f2;*/
+    background: #fff;
+    border: 1px solid  #c4c4c4;
+}

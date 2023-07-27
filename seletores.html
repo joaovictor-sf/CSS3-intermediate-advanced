@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+    <style>
+        *{/*Seleciona tudo*/
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            color: white;
+        }
+
+        body{
+            background-color: #121212;
+        }
+
+        p.verde{
+            color: green;
+        }
+
+        li>a{/*Seletor do filho*/
+            /*Só afeta os links diretamente dentro do li, se tiver por exemplo um <span><a href=""></a></span>*/
+            /*o link não será modificado*/
+            text-decoration: none;
+            color: red;
+        }
+
+        p a{/*Seletor Descedente*/
+            /*Afeta todos os descedentes <a> de <p>, portando, diferente do filho, 
+            não importar se o <a> estiver dentro de outro elemento, 
+            contando que o <a> esteja dentro do <p> o <a> será modificado*/
+            color: yellow;
+        }
+
+        h1+p{/*Seletor de irmão*/
+            /*Seleciona o primeiro elemento <p> que esteja diretamente a baixo de h1 <h1>*/
+            /*Se tiver qualquer tag entre eles, o <p> não será modificado*/
+            text-decoration: underline;
+        }
+
+        h2~p{/*Irmão geral*/
+            /*A diferença do seletor de irmão é que afetará todos os <p> que estejam diretamente embaixo do <h2>*/
+            color: brown;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1 class="verde">Seletores</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+    </p>
+
+    <p class="verde">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus. <span><a href="">Saiba mais.</a></span>
+    </p>
+
+    <ul>
+        <li><span><a href="">Home</a></span></li>
+        <li><a href="">Sobre</a></li>
+    </ul>
+
+    <h2>Irmão Geral</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+    </p>
+    
+    
+</body>
+</html>

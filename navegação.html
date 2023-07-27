@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação</title>
+    
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*O div é somente para dividir o vertical do horizontal*/
+        div ul a{
+            display: block;
+            height: 40px;
+            width: 200px;
+            background: #f7b600 url("imagem/menu.png") no-repeat;
+            /*É boa praticar por uma cor de fundo para o caso da imagem não carregar*/
+            text-decoration: none;
+            color: #000;
+            text-indent: 40px;/*Semelhante ao padding mas para texto*/
+            line-height: 40px;/*A altura da linha que esta o texto*/
+        }
+
+        /*Ultilizar uma classe é uma maneira de marcar a página atual*/
+        div a:hover, div .selecionado a{
+            background-position: right bottom;
+            background-color: #f99200;
+            color: white;
+        }
+
+        /*Horizontal*/
+        ul#horizontal{
+            width: 720px;
+            background: #157cb0 url("imagem/fundo-horizontal.png") repeat-x;
+            float: left;
+        }
+
+        ul#horizontal li{
+            float: left;
+        }
+
+        ul#horizontal a{
+            display: block;
+            padding: 0 2em;
+            line-height: 2em;
+            text-decoration: none;
+            color: #fff;
+            /*border-left: 1px solid gray;Uma maneira de colcar um divisor entre os links*/
+            background: url("imagem/divisor.png") repeat-y;
+        }
+
+        ul#horizontal .primeiro a{
+            background: none;
+        }
+
+        ul#horizontal a:hover, ul#horizontal .selecionado{
+            color: #085662;
+            background: #44cade;
+        }
+
+        /*Abas*/
+        ul#abas{
+            width: 720px;
+        }
+
+        ul#abas li{
+            float: left;
+            background: url("imagem/aba-direita.png") no-repeat top right;
+        }
+
+        ul#abas a{
+            display: block;
+            padding: 0 2em;
+            line-height: 3em;
+            text-decoration: none;
+            background: url("imagem/aba-esquerda.png") no-repeat top left;
+            color: white;
+        }
+
+        ul#abas a:hover{
+            color: #894a1f;
+        }
+
+        ul#abas .selecionado{
+            background: url("imagem/aba-direita-atual.png") no-repeat top right;
+        }
+
+        ul#abas .selecionado a{
+            background: url("imagem/aba-esquerda-atual.png") no-repeat top left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Vertical</h2>
+        <ul>
+            <li class="selecionado"><a href="">HOME</a></li>
+            <li><a href="layaout.html">SOBRE</a></li>
+            <li><a href="">CONTATO</a></li>
+            <li><a href="">PROJETOS</a></li>
+        </ul>
+    </div>
+
+    <h2>Horizontal</h2>
+    <ul id="horizontal">
+        <li class="selecionado primeiro"><a href="">HOME</a></li>
+        <li><a href="">SOBRE</a></li>
+        <li><a href="">CONTATO</a></li>
+        <li><a href="">PROJETOS</a></li>
+    </ul>
+    <br><br>
+    <h2>Abas</h2>
+    <ul id="abas">
+        <li class="selecionado"><a href="">HOME</a></li>
+        <li><a href="">SOBRE</a></li>
+        <li><a href="">CONTATO</a></li>
+        <li><a href="">PROJETOS</a></li>
+    </ul>
+    
+</body>
+</html>

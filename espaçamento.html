@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaçamento</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /*
+        Flutuação
+        */
+
+        .flutuar{
+            background: blue;
+            border: 1px solid grey;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 10px;
+        }
+        .flutuar2{
+            background: red;
+            border: 1px solid grey;
+            width: 200px;
+            height: 200px;
+            float: right;
+            margin: 10px;
+        }
+
+        .clear{
+            clear: left;
+        }
+
+        #principal{
+            background: black;
+        }
+
+        /*
+        Block, inline e inline-block
+        */
+        span.a {
+        display: inline; /* the default for span */
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;  
+        background-color: yellow; 
+        }
+
+        span.b {  
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;    
+        background-color: yellow; 
+        }
+
+        span.c {
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;    
+        background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="link.html">Links</a>
+    <!-- Inicio sobre margin e padding -->
+    <h2>Margin e Padding</h2>
+    <div class="conteudo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat eget urna in luctus.
+    </div>
+    <div class="conteudo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat eget urna in luctus. 
+    </div>
+    <!-- Fim sobre margin e padding -->
+    <!-- Inicio sobre elementos flutuantes -->
+    <h2>Float</h2>
+    <div id="principal">
+        <div class="flutuar">
+            Conteudo 1
+        </div>
+        <div class="flutuar">
+            Conteudo 2
+        </div>
+        <div class="flutuar">
+            Conteudo 3
+        </div>
+        <div class="flutuar2">
+            Conteudo 4
+        </div>
+        <div class="flutuar2">
+            Conteudo 5
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="flutuar">
+        Conteudo 1
+    </div>
+    <div class="flutuar">
+        Conteudo 2
+    </div>
+    <div class="flutuar">
+        Conteudo 3
+    </div>
+    <div class="flutuar2">
+        Conteudo 4
+    </div>
+    <div class="flutuar2">
+        Conteudo 5
+    </div>
+    <p class="clear">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo finibus tempor. 
+        Quisque aliquam, est non luctus ullamcorper, augue leo sodales ex, nec pretium est ipsum vitae massa. 
+        Proin tortor lacus, hendrerit egestas nulla eget, vulputate sollicitudin purus. 
+        Aenean aliquam tincidunt velit nec varius. Orci varius natoque penatibus et magnis dis parturient montes, 
+        nascetur ridiculus mus. Donec id lectus ut mauris rutrum malesuada a sodales quam. 
+        Vestibulum finibus dui lorem, a semper elit cursus eget. Curabitur sed elementum mauris. 
+        Phasellus sed tellus tempus, pellentesque lectus sed, rhoncus nunc. Donec ac laoreet arcu.
+    </p>
+    <!-- Fim sobre elementos flutuantes -->
+    <!-- Inicio sobre block, inline e inline-block -->
+    <h3>Block, inline e inline-block</h3>
+    <h2>display: inline</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+        <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. 
+        Nullam cursus fermentum velit sed laoreet.
+    </div>
+
+    <h2>display: inline-block</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+        <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. 
+        Nullam cursus fermentum velit sed laoreet. 
+    </div>
+
+    <h2>display: block</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+        <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. 
+        Nullam cursus fermentum velit sed laoreet. 
+    </div>
+    <!-- Fim sobre block, inline e inline-block -->
+</body>
+</html>

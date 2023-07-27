@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <style type="text/css">
+        /*
+        ***Configurações padrão da página
+        */
+        body, html{
+            margin: 0;
+            font: 16px "Lato", sans-serif;
+            color: #777;
+            height: 100%;
+        }
+
+        .conteudo {
+            color: #777;
+            background: white;
+            text-align: justify;
+            padding: 50px 80px;
+        }
+
+        h3{
+            text-transform: uppercase;
+            color: #111;
+            text-align: center;
+        }
+
+        p{
+            margin-bottom: 20px;
+        }
+
+        /*
+        ***Efeito Parallax
+        */
+        .caixa1, .caixa2, .caixa3, .caixa4{
+            position: relative;
+            height: 100%;
+            opacity: 0.8;
+            /* para ir para todas de uma vez */
+            background-repeat: no-repeat;
+            /* Serve para fazer o backgrand cobrir toda a area da caixa, o ideal é ter uma imagem maior */
+            background-size: cover;
+            /* Imagem sempre centralizada */
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .caixa1{
+            background-image: url(imagem/imagem1.jpg);
+        }
+
+        .caixa2{
+            background-image: url(imagem/imagem2.jpg);
+        }
+
+        .caixa3{
+            background-image: url(imagem/imagem3.jpg);
+        }
+
+        .caixa4{
+            background-image: url(imagem/imagem4.jpg);
+        }
+
+        .conteudo-titulo{
+            position: absolute;
+            top: 45%;
+            text-align: center;
+            width: 100%;
+        }
+
+        .conteudo-titulo span.titulo{
+            color: #fff;
+            background-color: #111;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caixa1">
+        <div class="conteudo-titulo">
+            <span class="titulo">PASSEIO DE BALÕES</span>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <h3>Conteudo 2</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin vitae ligula tempus diam iaculis rutrum sit amet sit amet dolor. 
+            Sed odio enim, imperdiet aliquet lectus quis, posuere interdum lorem. 
+            Fusce at ligula eu velit scelerisque sollicitudin. 
+            Phasellus congue nisi ut dui auctor vestibulum. 
+            Donec a libero non justo pulvinar congue. Cras congue justo sapien, 
+            eu lobortis magna suscipit vel. Aliquam laoreet pharetra erat vitae cursus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin vitae ligula tempus diam iaculis rutrum sit amet sit amet dolor. 
+            Sed odio enim, imperdiet aliquet lectus quis, posuere interdum lorem. 
+            Fusce at ligula eu velit scelerisque sollicitudin. 
+            Phasellus congue nisi ut dui auctor vestibulum. 
+            Donec a libero non justo pulvinar congue. Cras congue justo sapien, 
+            eu lobortis magna suscipit vel. Aliquam laoreet pharetra erat vitae cursus.
+        </p>
+    </div>
+
+    <div class="caixa2">
+        <div class="conteudo-titulo">
+            <span class="titulo">PEGANDO A ESTRATA</span>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <h3>Conteudo 2</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin vitae ligula tempus diam iaculis rutrum sit amet sit amet dolor. 
+            Sed odio enim, imperdiet aliquet lectus quis, posuere interdum lorem. 
+            Fusce at ligula eu velit scelerisque sollicitudin. 
+            Phasellus congue nisi ut dui auctor vestibulum. 
+            Donec a libero non justo pulvinar congue. Cras congue justo sapien, 
+            eu lobortis magna suscipit vel. Aliquam laoreet pharetra erat vitae cursus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin vitae ligula tempus diam iaculis rutrum sit amet sit amet dolor. 
+            Sed odio enim, imperdiet aliquet lectus quis, posuere interdum lorem. 
+            Fusce at ligula eu velit scelerisque sollicitudin. 
+            Phasellus congue nisi ut dui auctor vestibulum. 
+            Donec a libero non justo pulvinar congue. Cras congue justo sapien, 
+            eu lobortis magna suscipit vel. Aliquam laoreet pharetra erat vitae cursus.
+        </p>
+    </div>
+    
+    <div class="caixa3">
+        <div class="conteudo-titulo">
+            <span class="titulo">POR DO SOL</span>
+        </div>
+    </div>
+
+    <div class="caixa4">
+        <div class="conteudo-titulo">
+            <span class="titulo">MONTANHAS</span>
+        </div>
+    </div>
+
+</body>
+</html>

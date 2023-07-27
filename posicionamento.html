@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento(static, relative, absolute e fixed)</title>
+    <style>
+        p{
+            width: 300px;
+        }
+
+        body{
+            background-color: aqua;
+        }
+        .container{
+            background-color: white;
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+            position: relative;
+        }
+
+        .relative{
+            /*A não ser que o modifique com top/left/right/bottom, um elemento relative é igual a um static*/
+            border: 1px solid red;
+            /*static(default), relative, absolute e fixed*/
+            position: relative;
+            /*Relative permite mudar a posição do elemento*/
+            /*As direções são contrarias, 
+            então se vc colocar top ele vai para vaixo, right ele vai para a esquerda, ai em diante*/
+            top: 10px;
+            left: 450px;
+        }
+
+        .absolute{
+            /*O elemento sai do fluxo normal e os outros elementos agem como se ele não existice*/
+            /*Um elemento absolute é alinhado de acordo com a página ignorando o container que estiver
+            se o mesmo for static*/
+            border: 1px solid red;
+            position: absolute;
+            left: 320px;
+            bottom: 20em;
+        }
+
+        .fixed{
+            /*Um elemento em uma posição fixed fica fixado em uma parte da página 
+            não importando se vc role ela para cima ou pra baixo*/
+            border: 1px solid red;
+            background-color: white;
+            margin: 0;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .sticky{
+            border: 1px solid red;
+            position: -webkit-sticky; /*Safari*/
+            position: sticky;
+            top: 0;
+        }
+
+        #conteudo1{
+            background-color: red;
+            position: absolute;
+            bottom: 100px;
+            z-index: 0;
+            left: 100px
+        }
+        #conteudo2{
+            background-color: blue;
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        #conteudo3{
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Posicionamento Stycky</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p class="sticky">
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus. <a href="link.html">Links</a>
+        </p>
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <hr>
+        <h1>Posicionamento Static(default)</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p>
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <hr>
+        <h1>Posicionamento Relative</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p class="relative">
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <hr>
+        <h1>Posicionamento Absolute</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p class="absolute">
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <hr>
+        <h1>Posicionamento Fixed</h1>
+        <p>
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p class="fixed">
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p>
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <hr>
+        <h1>Contexto de empilhamento</h1>
+        <p id="conteudo1">
+            P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p id="conteudo2">
+            P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <p id="conteudo3">
+            P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis nibh sem, 
+            in hendrerit sem lobortis quis. Nunc pellentesque faucibus lacinia. Sed lorem orci, 
+            pretium ac vulputate viverra, mattis ut lectus.
+        </p>
+        <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>
