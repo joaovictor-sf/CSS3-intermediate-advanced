@@ -93,3 +93,66 @@ Ele é posicionado relativo até que uma determinada posição de deslocamento s
 
 ### Controle de empilhamento
 Quando uma posição fica acima da outra e você quer decidir qual sobrepõe a outra você pode utilizar z-index para decidir qual irá aparecer primeiro.
+
+## Links
+ Os links possuem 4 diferentes estados, eles são:
+
+<ul>
+<li>a:link - um normal, link não visitado;</li>
+<li>a:visited - um link que o usuário já visitou;</li>
+<li>a:hover - o link quando o usuário para o mouse em cima;</li>
+<li>a:active - o link quanto é clicado;</li>
+</ul>
+
+## Especificação de seletores
+Tem momentos que você deseja fazer modificações específicas em lugares específicos, como um menu de links.
+
+### Seletor do filho
+Exemplo: 
+    
+    li>a
+
+Só afeta os links diretamente dentro do li, se tiver por exemplo um <span><a href=""></a></span> o link não será modificado
+
+### Seletor Descendente
+Exemplo:
+
+    p a
+
+Afeta todos os descendentes &a> dentro do &lt;p>, portanto, diferente do filho, não importa se o &lt;a> estiver dentro de outro elemento, contando que o &lt;a> esteja dentro do &lt;p> o &lt;a> será modificado.
+
+### Seletor de irmão
+Exemplo:
+
+    h1+p
+
+Seleciona o primeiro elemento &lt;p> que esteja diretamente abaixo de h1 &lt;h1>
+
+Se tiver qualquer tag entre eles, o &lt;p> não será modificado
+
+### Irmão geral
+Exemplo:
+
+    h1~p
+
+A diferença do seletor de irmão é que afetará todos os &lt;p> que estejam diretamente embaixo do &lt;h2>.
+
+## Parallax
+Parallax é um efeito visual usado para manipular a percepção do usuário no background.
+
+Para adquiri-lo, costuma-se usar javascript, mas também é possível com CSS3
+
+    height: 100%;
+    O height do html, body, e dos containers das imagens tem que ser 100%;
+
+    background-repeat: no-repeat;
+    Para as imagens não se repetirem;
+
+    background-size: cover;
+    Para o background cobrir todo o container;
+
+    background-position: center;
+    Centralize a imagem no container;
+
+    background-attachment: fixed;
+    Deixar a imagem fixa, principal fator para o efeito parallax;
